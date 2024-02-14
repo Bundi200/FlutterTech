@@ -28,9 +28,9 @@
             </Grid.RowDefinitions>
 
 
-            <Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentDateAndTime}">
+            <!--<Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentDateAndTime}">
                 
-            </Label>
+            </Label>-->
 
             <Label Content="Mini Projects"
                    HorizontalAlignment="Center"
