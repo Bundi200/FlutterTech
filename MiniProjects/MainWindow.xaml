@@ -1,0 +1,89 @@
+﻿<Window x:Class="MiniProjects.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjects"
+        xmlns:viewModel="clr-namespace:MiniProjects.MVVM.ViewModel"
+        mc:Ignorable="d"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" Height="880" Width="1700">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    <Border Background ="#272637"  CornerRadius="20">
+        <Grid>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="1500"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="790"/>
+
+
+            </Grid.RowDefinitions>
+
+
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentDateAndTime}">
+                
+            </Label>
+
+            <Label Content="Mini Projects"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   FontSize="20"
+                   Margin="0,0,50,0" 
+                   FontFamily="Bauhaus 93"/>
+
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="Home"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="15"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True"
+                             Command="{Binding HomeCommand}"
+                             />
+                
+                <RadioButton Content="Note Application"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="15"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="False"
+                             Command="{Binding NoteCommand}"/>
+                
+                <RadioButton Content="Calculator"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="15"
+                             Style="{StaticResource MenuButtonTheme}"/>
+                
+                <RadioButton Content="Employee Promotion"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="15"
+                             Style="{StaticResource MenuButtonTheme}"/>
+                
+                <RadioButton Content="Drawing"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="15"
+                             Style="{StaticResource MenuButtonTheme}"/>
+
+
+            </StackPanel>
+
+            <ContentControl Grid.Row="1" 
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+
+        </Grid>
+    </Border>
+</Window>

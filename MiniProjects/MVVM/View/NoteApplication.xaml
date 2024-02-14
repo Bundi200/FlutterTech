@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="MiniProjects.MVVM.View.NoteApplication"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MiniProjects.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1900" Background="Transparent" Loaded="Window_Load">
+    <Border CornerRadius="10" Background="#844eff">
+
+        <Grid x:Name="grd_Grid" Margin= "10">
+            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="680" />
+
+        </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1300" />
+                <ColumnDefinition Width="*" />
+
+
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" 
+                       Margin="20,0,0,0" 
+                       Content="Note Application"
+                       FontSize="25"
+                       Foreground="White"
+                       FontFamily="Bauhaus 93"
+                       VerticalAlignment="Center">
+
+
+                    <Label.Effect>
+                        <DropShadowEffect/>
+                    </Label.Effect>
+                    
+                    
+                </Label>
+
+                <StackPanel Grid.Column="1" Margin="5" Background="#FF770202" Orientation="Horizontal">
+
+                <StackPanel.Effect>
+
+                    <DropShadowEffect/>
+
+                </StackPanel.Effect>
+
+
+                    <CheckBox x:Name="chk_CheckAll" 
+                              Margin="2" 
+                              Click="chk_CheckAll_Click" 
+                              Content="Check all checkbox's" 
+                              Foreground="White" 
+                              OpacityMask="Red" 
+                              FontSize="20" 
+                              Padding="0,0,0,0" 
+                              VerticalContentAlignment="Center" 
+                              HorizontalContentAlignment="Center" 
+                              UseLayoutRounding="False" 
+                              Background="#FF0085CA" 
+                              BorderBrush="Black"
+                              FontFamily="Bauhaus 93"
+                              />
+
+                    <Button x:Name="btn_AddPanel" 
+                            Margin="10,2,2,2" 
+                            Click="btn_AddPanel_Click" 
+                            Content="Add ListBox" 
+                            Height="30" 
+                            Width="130"
+                            OpacityMask="Red"
+                            BorderBrush="Black" 
+                            Foreground="White" 
+                            Background="#FF0085CA"
+                            FontFamily="Bauhaus 93"
+                            FontSize="20"/>
+
+                    <Button x:Name="btn_Save" 
+                            Margin="2" 
+                            Click="btn_Save_Click"
+                            Content="Save" 
+                            Height="30" 
+                            Width="130"
+                            Foreground="White" 
+                            BorderBrush="Black" 
+                            Background="#FF0085CA" 
+                            FontFamily="Bauhaus 93"
+                            FontSize="20"/>
+
+                    <Button x:Name="btn_Delete" 
+                            Margin="2" 
+                            Click="btn_Delete_Click" 
+                            Content="Delete" 
+                            Height="30"
+                            Width="130"
+                            BorderBrush="Black" 
+                            Foreground="White" 
+                            Background="#FF0085CA" 
+                            FontFamily="Bauhaus 93"
+                            FontSize="20"/>
+
+
+
+                </StackPanel>
+            </Grid>
+
+
+            <Border Grid.Row="1" CornerRadius="20" Background="#FF232323">
+                <Border.Effect>
+                    <DropShadowEffect/>
+                </Border.Effect>
+
+                <ListBox  x:Name="lst_Notes" Background="Transparent" Margin="10" BorderBrush="Transparent">
+                    
+                </ListBox>
+                
+            </Border>
+
+        </Grid>
+    </Border>
+</UserControl>
