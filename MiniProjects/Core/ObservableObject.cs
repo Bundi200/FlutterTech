@@ -11,27 +11,46 @@ namespace MiniProjects.Core
 {
     internal class ObservableObject : INotifyPropertyChanged
     {
-        //public DateTime CurrentDateAndTime { get; set; }
-        public event PropertyChangedEventHandler PropertyChanged; 
-        public event PropertyChangedEventHandler PropertyChanged2;
+        private DateTime _currentDateAndTime;
 
-        //public ObservableObject() 
-        //{
-        //    DispatcherTimer timer = new DispatcherTimer();
-        //    timer.Interval = TimeSpan.FromMilliseconds(500);
-        //    timer.Tick += new EventHandler(lbl_time);
-        //    timer.Start();
-        //}
+        public DateTime CurrentDateAndTime
+        {
+            get { return _currentDateAndTime; }
+            set
+            {
+                if (_currentDateAndTime != value)
+                {
+                    _currentDateAndTime = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+
+        public ObservableObject()
+        {
+            InitializeTimer();
+        }
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-        //public void lbl_time(object sender, EventArgs e)
-        //{
-        //    CurrentDateAndTime = DateTime.Now;
-        //    PropertyChanged2(this, new PropertyChangedEventArgs(propertyName: "CurrentDateAndTime"));
 
-        //}
+        private void InitializeTimer()
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(500);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            CurrentDateAndTime = DateTime.Now;
+
+        }
     }
 }
