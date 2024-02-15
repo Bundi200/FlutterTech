@@ -23,6 +23,21 @@ namespace MiniProjects
         public MainWindow()
         {
             InitializeComponent();
+            test();
+        }
+        public void test()
+        {
+            int i = 0;
+            if (i == 0)
+            {
+                Label label = new Label();
+                label.Content = DateTime.Now.ToShortDateString();
+                label.VerticalAlignment = VerticalAlignment.Center;
+                label.HorizontalAlignment = HorizontalAlignment.Center;
+                label.Foreground = new SolidColorBrush(Colors.White);
+
+                lbl_date.Content = label;
+            }
         }
     }
 }
