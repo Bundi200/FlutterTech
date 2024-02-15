@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MiniProjects.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="550" d:DesignWidth="800">
     <StackPanel>
         <TextBlock Text="Discovery"
                    Foreground="White"
@@ -13,10 +13,10 @@
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
                    FontFamily="Bauhaus 93"/>
-        
+
         <StackPanel Orientation="Horizontal"
                     Margin="10,0,10,10">
-            
+
             <Border Width="400"
                     Height="200">
                 <Border.Background>
@@ -44,21 +44,21 @@
                                    FontSize="16"
                                    Margin="20,20,0,0"
                                    FontFamily="Bauhaus 93"/>
-                        
+
                     </StackPanel>
                     <!--<Image Width="250"
                            Height="252"
                            Source="/Images/" Margin="157,78,-7,-130"/>-->
                 </Grid>
 
-                
+
 
             </Border>
             <Border Width="300"
                     Height="200"
                     Margin="50,0,0,0"
                     CornerRadius="10">
-                
+
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                         <GradientStop Color="#FF8A7F01" Offset="0.0"/>
@@ -89,18 +89,28 @@
                         CornerRadius="10"
                         Background="#844eff">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
                         <Label Content="Note Application"
                                FontFamily="Bauhaus 93"
-                               FontSize="18"
-                               HorizontalAlignment="Center"
+                               FontSize="16"
+                               Foreground="White"
+                               Margin="0,150,-110,-30" Grid.Column="0"
                                VerticalAlignment="Center"
-                               Foreground="White"/>
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center">
+                            <Label.RenderTransform>
+                                <RotateTransform Angle="270" ></RotateTransform>
+
+                            </Label.RenderTransform>
+
+
+                        </Label>
                     </Grid>
-                
+
                 </Border>
 
                 <Border Width="150"
@@ -108,18 +118,31 @@
                         CornerRadius="10"
                         Background="#FF1E75B7">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
                         <Label Content="Calculator"
                                FontFamily="Bauhaus 93"
-                               FontSize="18"
-                               HorizontalAlignment="Center"
+                               FontSize="16"
+                               Foreground="White"
+                               Margin="0,150,-110,-30" 
+                               Grid.Column="0"
                                VerticalAlignment="Center"
-                               Foreground="White"/>
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center">
+                            <Label.RenderTransform>
+                                <RotateTransform Angle="270" ></RotateTransform>
+
+                            </Label.RenderTransform>
+
+
+                        </Label>
                     </Grid>
+
                     
+
                 </Border>
 
                 <Border Width="150"
@@ -127,19 +150,30 @@
                         CornerRadius="10"
                         Background="#FF2CB586">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
                         <Label Content="Drawing Board"
-                               FontFamily="Bauhaus 93"
-                               FontSize="18"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               Foreground="White"/>
+       FontFamily="Bauhaus 93"
+       FontSize="16"
+       Foreground="White"
+       Margin="0,150,-110,-30" 
+       Grid.Column="0"
+       VerticalAlignment="Center"
+       HorizontalContentAlignment="Center"
+       VerticalContentAlignment="Center">
+                            <Label.RenderTransform>
+                                <RotateTransform Angle="270" ></RotateTransform>
+
+                            </Label.RenderTransform>
+
+
+                        </Label>
 
                     </Grid>
-                    
+
                 </Border>
 
                 <Border Width="150"
@@ -147,18 +181,29 @@
                         CornerRadius="10"
                         Background="#FFAFB548">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Label Content="Employee Promotion"
-                               FontFamily="Bauhaus 93"
-                               FontSize="15"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               Foreground="White"/>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Coming Soon"
+       FontFamily="Bauhaus 93"
+       FontSize="16"
+       Foreground="White"
+       Margin="0,150,-110,-30" 
+       Grid.Column="0"
+       VerticalAlignment="Center"
+       HorizontalContentAlignment="Center"
+       VerticalContentAlignment="Center">
+                            <Label.RenderTransform>
+                                <RotateTransform Angle="270" ></RotateTransform>
+
+                            </Label.RenderTransform>
+
+
+                        </Label>
                     </Grid>
-                    
+
                 </Border>
 
                 <Border Width="150"
@@ -166,22 +211,33 @@
                         CornerRadius="10"
                         Background="#EB7BB6">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Label Content="Number Generator"
-                               FontFamily="Bauhaus 93"
-                               FontSize="20"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               Foreground="White"/>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Coming Soon"
+       FontFamily="Bauhaus 93"
+       FontSize="16"
+       Foreground="White"
+       Margin="0,150,-110,-30" 
+       Grid.Column="0"
+       VerticalAlignment="Center"
+       HorizontalContentAlignment="Center"
+       VerticalContentAlignment="Center">
+                            <Label.RenderTransform>
+                                <RotateTransform Angle="270" ></RotateTransform>
+
+                            </Label.RenderTransform>
+
+
+                        </Label>
                     </Grid>
 
                 </Border>
             </StackPanel>
-            
-            
+
+
         </StackPanel>
 
     </StackPanel>
