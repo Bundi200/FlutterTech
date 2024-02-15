@@ -31,8 +31,29 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="300"/>
                     <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="300"/>
 
                 </Grid.ColumnDefinitions>
+
+                <StackPanel x:Name="sp_Buttons" Grid.Row="0" Grid.Column="3" Orientation="Horizontal" Background="Black">
+
+                    <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
+                        </Border.Clip>
+                    </Border>
+                    <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
+                        </Border.Clip>
+                    </Border>
+                    <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
+                        </Border.Clip>
+                    </Border>
+                
+                </StackPanel>
 
                 <Label Grid.Column="1" 
                        Grid.Row="0" 

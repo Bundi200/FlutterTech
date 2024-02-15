@@ -23,10 +23,10 @@ namespace MiniProjects
         public MainWindow()
         {
             InitializeComponent();
-            test();
+            UpdateLabel();
         }
         //test hogy le ment e?
-        public void test()
+        public void UpdateLabel()
         {
             int i = 0;
             if (i == 0)
@@ -39,6 +39,21 @@ namespace MiniProjects
 
                 lbl_date.Content = label;
             }
+        }
+
+        public void Buttons()
+        {
+
+            Button btnClose = new Button();
+
+
+            Button btnRestoreDown = new Button();
+
+
+            Button btnMinimise = new Button();
+
+            
+
         }
     }
 }
