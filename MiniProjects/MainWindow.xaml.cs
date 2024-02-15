@@ -25,6 +25,7 @@ namespace MiniProjects
             InitializeComponent();
             test();
         }
+        //test hogy le ment e?
         public void test()
         {
             int i = 0;
