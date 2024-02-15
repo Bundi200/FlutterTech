@@ -35,28 +35,28 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="1" 
-              Grid.Row="0" 
-              x:Name="lbl_date" 
-              FontFamily="Bauhaus 93" 
-              FontSize="30" 
-              HorizontalContentAlignment="Right" 
-              VerticalAlignment="Center" 
-              Foreground="White" 
-              Background="Transparent"
-              BorderBrush="Transparent">
+                       Grid.Row="0" 
+                       x:Name="lbl_date" 
+                       FontFamily="Bauhaus 93" 
+                       FontSize="30" 
+                       HorizontalContentAlignment="Right" 
+                       VerticalAlignment="Center" 
+                       Foreground="White" 
+                       Background="Transparent"
+                       BorderBrush="Transparent">
 
                 </Label>
 
                 <Label x:Name="lbl_Time"
-            Grid.Row="0" 
-            Grid.Column="2" 
-            Content="{Binding CurrentDateAndTime}" 
-            ContentStringFormat=" {0:T}"
-            FontFamily="Bauhaus 93"
-            Foreground="White"
-            FontSize="40"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center">
+                       Grid.Row="0" 
+                       Grid.Column="2" 
+                       Content="{Binding CurrentDateAndTime}" 
+                       ContentStringFormat=" {0:T}"
+                       FontFamily="Bauhaus 93"
+                       Foreground="White"
+                       FontSize="40"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center">
 
                 </Label>
             </Grid>
