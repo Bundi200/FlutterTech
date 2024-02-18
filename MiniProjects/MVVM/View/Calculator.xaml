@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="MiniProjects.MVVM.View.Calculator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MiniProjects.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="450" >
+    <Border CornerRadius="10" Background="#844eff">
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.Background>
+                <ImageBrush/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="112.5"/>
+                <ColumnDefinition Width="112.5"/>
+                <ColumnDefinition Width="112.5"/>
+                <ColumnDefinition Width="112.5"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="83"/>
+                <RowDefinition Height="83"/>
+                <RowDefinition Height="83"/>
+                <RowDefinition Height="83"/>
+                <RowDefinition Height="83"/>
+                <RowDefinition Height="83"/>
+                <RowDefinition Height="83"/>
+                <RowDefinition Height="83"/>
+                <RowDefinition Height="83"/>
+
+
+            </Grid.RowDefinitions>
+
+
+            <Rectangle Grid.Row="5" Grid.Column="0" ></Rectangle>
+            <Button Grid.Row="5" Grid.Column="1" x:Name="btn_Brackets" Content="()" FontSize="20" Click="btn_Brackets_Click"/>
+            <Button Grid.Row="5" Grid.Column="2" x:Name="btn_Clear" Content="C" FontSize="20" Click="btn_Clear_Click"/>
+            <Button Grid.Row="5" Grid.Column="3" x:Name="btn_Divide" Content="/" FontSize="20" Click="btn_Divide_Click"/>
+            <Button Grid.Row="6" Grid.Column="0" x:Name="btn_Num7" Content="7" FontSize="20" Click="btn_Num7_Click"/>
+            <Button Grid.Row="6" Grid.Column="1" x:Name="btn_Num8" Content="8" FontSize="20" Click="btn_Num8_Click"/>
+            <Button Grid.Row="6" Grid.Column="2" x:Name="btn_Num9" Content="9" FontSize="20" Click="btn_Num9_Click"/>
+            <Button Grid.Row="6" Grid.Column="3" x:Name="btn_Multiple" Content="*" FontSize="20" Click="btn_Multiple_Click"/>
+            <Button Grid.Row="7" Grid.Column="0" x:Name="btn_Num4" Content="4" FontSize="20" Click="btn_Num4_Click"/>
+            <Button Grid.Row="7" Grid.Column="1" x:Name="btn_Num5" Content="5" FontSize="20" Click="btn_Num5_Click"/>
+            <Button Grid.Row="7" Grid.Column="2" x:Name="btn_Num6" Content="6" FontSize="20" Click="btn_Num6_Click"/>
+            <Button Grid.Row="7" Grid.Column="3" x:Name="btn_Minus" Content="-" FontSize="20" Click="btn_Minus_Click"/>
+            <Button Grid.Row="8" Grid.Column="0" x:Name="btn_Num1" Content="1" FontSize="20" Click="btn_Num1_Click"/>
+            <Button Grid.Row="8" Grid.Column="1" x:Name="btn_Num2" Content="2" FontSize="20" Click="btn_Num2_Click"/>
+            <Button Grid.Row="8" Grid.Column="2" x:Name="btn_Num3" Content="3" FontSize="20" Click="btn_Num3_Click"/>
+            <Button Grid.Row="8" Grid.Column="3" x:Name="btn_Plus" Content="+" FontSize="20" Click="btn_Plus_Click"/>
+            <Rectangle Grid.Row="9" Grid.Column="0"></Rectangle>
+            <Button Grid.Row="9" Grid.Column="1" x:Name="btn_Num0" Content="0" FontSize="20" Click="btn_Num0_Click"/>
+            <Button Grid.Row="9" Grid.Column="2" x:Name="btn_Dot" Content="." FontSize="20" Click="btn_Dot_Click"/>
+            <Button Grid.Row="9" Grid.Column="3" x:Name="btn_Equal" Content="=" FontSize="20" Click="btn_Equal_Click"/>
+
+            <TextBox Grid.Row="2" Grid.ColumnSpan="3" x:Name="txt_Result" Background="#FFE8E8E8"></TextBox>
+            <TextBox Grid.Row="3" Grid.ColumnSpan="3" x:Name="txt_formula" Background="#FFE8E8E8"></TextBox>
+            
+            
+        </Grid>
+    </Border>
+</UserControl>
