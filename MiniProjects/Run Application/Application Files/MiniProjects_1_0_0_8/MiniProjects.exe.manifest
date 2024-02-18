@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MiniProjects.exe" version="1.0.0.8" publicKeyToken="af9044abbda5c004" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MiniProjects" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MiniProjects.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MiniProjects.exe" size="3646424">
+      <assemblyIdentity name="MiniProjects" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Dc7CIN6XAjkBbjqVi/JOMJFlqGQoIuaQpiofp1XxD8Y=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MiniProjects.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oWu74zvPy0v3fB+cE0VM1nicyfA0TvANUiqy8USokWE=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-PATRIK\nyarf" issuerKeyHash="4f97fa388ab42e7a40a12a5c9e019fa1cc086102" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>K99EMaVgiylrfaaqzUXZSfpxwMrUKQbr16uW+a7PJy4=</DigestValue></Reference></SignedInfo><SignatureValue>CFV1As/to9+c7CpVfVjmn9WpkP/y7u0C8L5lczaFGKyq//PgBdm3JUTCrzjBMshWE3Vob6oknzWFAZ3BSHtTDmA779ugm5pn6ecPNbTAaKYAdVbPYAqp0iLBF7Mr/4m/qjRfsNPUiLdV3J5aiOp0D6mgcguQloLySHvl7dlnz7s=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wPXQRpkSOvrHrGZvp7mXfXRjGYPnFe3YB0kFUFrdtyFmhZHc6t266cAzV5sFV+i5hI/uUyVaS2AMZZraYvdhODlPENnJb/ABPfFoU17rFglD5BF8jur3VSf8MJn1OJqFH8Sm+mmrDp0BhhqCxKv+vQ7kK5TtoqR0bQj7erwKrw0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="2e27cfaef996abd7eb0629d4cac071fa49d945cdaaa67d6b298b60a53144df2b" Description="" Url=""><as:assemblyIdentity name="MiniProjects.exe" version="1.0.0.8" publicKeyToken="af9044abbda5c004" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-PATRIK\nyarf</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>SKFzSqBhuwBPg6RRzLswUejQq5YWfI/lzZTyJkHy+xA=</DigestValue></Reference></SignedInfo><SignatureValue>gHcmnntxyxi0hWtdbdXwKEs0XeO7hawhaS+2PukMSGGlWN57ijfCMLKltJ0gpY2dJbMxf4ExiIKn5U95+Dnwd5FNW9Nex+GweVZQKBbPkI8sVgm6zGANOUvaIAcrCSy/Mu/a8G0VV1SPEOgUGHtMYbq8G2KdQcNrwgZ4O0POpR8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wPXQRpkSOvrHrGZvp7mXfXRjGYPnFe3YB0kFUFrdtyFmhZHc6t266cAzV5sFV+i5hI/uUyVaS2AMZZraYvdhODlPENnJb/ABPfFoU17rFglD5BF8jur3VSf8MJn1OJqFH8Sm+mmrDp0BhhqCxKv+vQ7kK5TtoqR0bQj7erwKrw0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQWyMMnpTOfJxFvKCKeCxlSjANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigARABFAFMASwBUAE8AUAAtAFAAQQBUAFIASQBLAFwAbgB5AGEAcgBmMB4XDTI0MDIxNDIwNTc1MFoXDTI1MDIxNDAyNTc1MFowMzExMC8GA1UEAx4oAEQARQBTAEsAVABPAFAALQBQAEEAVABSAEkASwBcAG4AeQBhAHIAZjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwPXQRpkSOvrHrGZvp7mXfXRjGYPnFe3YB0kFUFrdtyFmhZHc6t266cAzV5sFV+i5hI/uUyVaS2AMZZraYvdhODlPENnJb/ABPfFoU17rFglD5BF8jur3VSf8MJn1OJqFH8Sm+mmrDp0BhhqCxKv+vQ7kK5TtoqR0bQj7erwKrw0CAwEAATANBgkqhkiG9w0BAQsFAAOBgQAxdBv/hSH9EPAnKBoLsZ34tnK/p3ShfMG64N0ggoMVK9PiX+EtQngjDaV4Fk0sm3DMfq1/r3RCWb8sPF3OlaDaFcprll3AzotulnB47M0QS5m6SOdJFdnYLeL8qBJpTR/CtN/RWYLx8t56BXZjkeFaK0EWFtATFZpMMVXeirVJ6Q==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
