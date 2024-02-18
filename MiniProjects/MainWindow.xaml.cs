@@ -55,5 +55,18 @@ namespace MiniProjects
             
 
         }
+
+        private void btn_close(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void btn_Minimise(object sender, RoutedEventArgs e)
+        {
+            WindowState = System.Windows.WindowState.Minimized;
+        }
+        private void btn_restore_down(object sender, RoutedEventArgs e)
+        {
+            WindowState = System.Windows.WindowState.Maximized;
+        }
     }
 }

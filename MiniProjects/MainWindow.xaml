@@ -35,22 +35,27 @@
 
                 </Grid.ColumnDefinitions>
 
-                <StackPanel x:Name="sp_Buttons" Grid.Row="0" Grid.Column="3" Orientation="Horizontal" Background="Black">
+                <StackPanel x:Name="sp_Buttons" Grid.Row="0" Grid.Column="3" Orientation="Horizontal" Background="Transparent">
 
                     <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
                         <Border.Clip>
                             <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
                         </Border.Clip>
+                        <Button Height="42" Width="42" Margin="0" Background="Green" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_Minimise"></Button>
+                    </Border>
+                    <Border Height="40" Width="40" Margin="40,10,10,10" Background="White" >
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
+                        </Border.Clip>
+                        <Button Height="42" Width="42" Margin="0" Background="Yellow" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_restore_down"> </Button>
+                        
+                        
                     </Border>
                     <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
                         <Border.Clip>
                             <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
                         </Border.Clip>
-                    </Border>
-                    <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
-                        <Border.Clip>
-                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
-                        </Border.Clip>
+                        <Button Height="42" Width="42" Margin="0" Background="Red" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_close"></Button>
                     </Border>
                 
                 </StackPanel>
