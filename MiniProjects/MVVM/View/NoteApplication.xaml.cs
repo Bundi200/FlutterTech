@@ -88,8 +88,9 @@ namespace MiniProjects.MVVM.View
                 ListBox dynamicPanel = new ListBox();
                 dynamicPanel.Margin = new Thickness(1);
                 dynamicPanel.Visibility = Visibility.Visible;
-                dynamicPanel.Background = new SolidColorBrush(Colors.Brown);
-                dynamicPanel.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                dynamicPanel.Background = new SolidColorBrush(Colors.Silver);
+                dynamicPanel.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 252, 206, 24));
+                dynamicPanel.BorderThickness = new Thickness(3);
 
                 CheckBox checkBox = new CheckBox();
                 checkBox.Visibility = Visibility.Visible;
@@ -120,7 +121,7 @@ namespace MiniProjects.MVVM.View
                 textbox.Padding = new Thickness(2);
                 textbox.MaxHeight = 500;
                 textbox.MinHeight = 200;
-                textbox.Width = 1240;
+                textbox.Width = 1235;
 
                 dynamicPanel.Items.Add(textbox);
                 dynamicPanel.Items.Add(checkBox);
@@ -256,8 +257,10 @@ namespace MiniProjects.MVVM.View
                             ListBox dynamicPanel = new ListBox();
                             dynamicPanel.Margin = new Thickness(1);
                             dynamicPanel.Visibility = Visibility.Visible;
-                            dynamicPanel.Background = new SolidColorBrush(Colors.Brown);
-                            dynamicPanel.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                            dynamicPanel.Background = new SolidColorBrush(Colors.Silver);
+                            dynamicPanel.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 252, 206, 24));
+                            dynamicPanel.BorderThickness = new Thickness(3);
+
 
                             CheckBox checkBox = new CheckBox();
                             checkBox.Visibility = Visibility.Visible;
@@ -288,7 +291,7 @@ namespace MiniProjects.MVVM.View
                             textbox.Padding = new Thickness(2);
                             textbox.MaxHeight = 500;
                             textbox.MinHeight = 200;
-                            textbox.Width = 1240;
+                            textbox.Width = 1235;
 
                             dynamicPanel.Items.Add(textbox);
                             dynamicPanel.Items.Add(checkBox);

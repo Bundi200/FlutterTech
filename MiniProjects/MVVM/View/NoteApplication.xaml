@@ -47,7 +47,7 @@
                     
                 </Label>
 
-                <StackPanel Grid.Column="1" Margin="5" Background="#FF770202" Orientation="Horizontal">
+                <StackPanel Grid.Column="1" Margin="5" Background="Silver" Orientation="Horizontal">
 
                 <StackPanel.Effect>
 
@@ -61,13 +61,13 @@
                               Click="chk_CheckAll_Click" 
                               Content="Check all checkbox's" 
                               Foreground="White" 
-                              OpacityMask="Red" 
+                              OpacityMask="#844eff" 
                               FontSize="20" 
                               Padding="0,0,0,0" 
                               VerticalContentAlignment="Center" 
                               HorizontalContentAlignment="Center" 
                               UseLayoutRounding="False" 
-                              Background="#FF0085CA" 
+                              Background="#FCCE18" 
                               BorderBrush="Black"
                               FontFamily="Bauhaus 93"
                               />
@@ -78,10 +78,10 @@
                             Content="Add ListBox" 
                             Height="30" 
                             Width="130"
-                            OpacityMask="Red"
+                            OpacityMask="#844eff"
                             BorderBrush="Black" 
                             Foreground="White" 
-                            Background="#FF0085CA"
+                            Background="#FCCE18"
                             FontFamily="Bauhaus 93"
                             FontSize="20"/>
 
@@ -93,7 +93,7 @@
                             Width="130"
                             Foreground="White" 
                             BorderBrush="Black" 
-                            Background="#FF0085CA" 
+                            Background="#FCCE18" 
                             FontFamily="Bauhaus 93"
                             FontSize="20"/>
 
@@ -105,7 +105,7 @@
                             Width="130"
                             BorderBrush="Black" 
                             Foreground="White" 
-                            Background="#FF0085CA" 
+                            Background="#FCCE18" 
                             FontFamily="Bauhaus 93"
                             FontSize="20"/>
 
