@@ -14,13 +14,16 @@
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
             </DataTemplate>
-
             <DataTemplate DataType="{x:Type viewModel:NoteApplicationViewModel}">
                 <view:NoteApplication/>
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewModel:CalculatorViewModel}">
                 <view:Calculator/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:DrawingBoardViewModel}">
+                <view:DrawingBoard/>
+            </DataTemplate>
+
 
             <FontFamily x:Key="LabelFontFamily1">ROG Fonts</FontFamily>
 

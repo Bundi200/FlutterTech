@@ -12,10 +12,12 @@ namespace MiniProjects.MVVM.ViewModel
         public RelayCommand HomeCommand { get; set; }
         public RelayCommand NoteCommand { get; set; }
         public RelayCommand CalculatorCommand { get; set; }
+        public RelayCommand DrawingBoardCommand { get; set; }
 
         public HomeViewModel HomeWM { get; set; }
         public NoteApplicationViewModel NoteApplicationWM { get; set; }
         public CalculatorViewModel CalculatorVM { get; set; }
+        public DrawingBoardViewModel DrawingBoardVM { get; set; }
 
         private object _currentView;
         
@@ -35,12 +37,14 @@ namespace MiniProjects.MVVM.ViewModel
             HomeWM = new HomeViewModel();
             NoteApplicationWM = new NoteApplicationViewModel();
             CalculatorVM = new CalculatorViewModel();
+            DrawingBoardVM = new DrawingBoardViewModel();
 
             CurrentView = HomeWM;
 
             HomeCommand = new RelayCommand(o => { CurrentView = HomeWM; });
             NoteCommand = new RelayCommand(o => { CurrentView = NoteApplicationWM; });
             CalculatorCommand = new RelayCommand(o => {  CurrentView = CalculatorVM; });
+            DrawingBoardCommand = new RelayCommand(o => { CurrentView = DrawingBoardVM; });
         }
     }
 }
