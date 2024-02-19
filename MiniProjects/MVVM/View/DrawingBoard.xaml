@@ -14,22 +14,21 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <Border Grid.Row="1" Background="Black" CornerRadius="10" Margin="40,0,0,0" Width="1400" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TabControl Grid.Column="0" Grid.Row="1" x:Name="tabcontrol" Background="Transparent" Height="700" BorderBrush="Transparent" Margin="5">
-
-
-                <TabItem Header="Welcome Page" Background="Green" >
+                <TabItem Header="Welcome Page" Background="Green">
                     <Border Height="700" Width="1400">
                             <Grid>
                                 <Image Source="/Images/backiee-189646.jpg"/>
-                                <Label Content="Welcome" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                       FontSize="100" FontFamily="Bauhaus 93">
-                                    
-                                </Label>
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Label Content="Welcome" Foreground="Green" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontFamily="Bauhaus 93" />
+
+                                    <Label Content="to the drawing board" Foreground="Green" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontFamily="Bauhaus 93"></Label>
+                                </StackPanel>                                
                             </Grid>                        
                             
                         <Border.Clip>
@@ -41,10 +40,12 @@
             </Border>
             
             <StackPanel Orientation="Horizontal">
-                <Button Grid.Row="0" x:Name="btn_add_tabitem" Click="Button_Click" Content="+" Width="20" Height="20" HorizontalAlignment="Left"></Button>
+                <Button Grid.Row="0" x:Name="btn_add_tabitem" Click="Button_Click" Width="80" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Background="Transparent" BorderBrush="Transparent">
+                    <Image Source="/Images/plus--v2.png" />
+                </Button>
 
-                <Button Grid.Row="0" x:Name="btn_remove_tabitem" Click="btn_remove_tabitem_Click" Content="-" Width="20" Height="20" HorizontalAlignment="Left">
-
+                <Button Grid.Row="0" x:Name="btn_remove_tabitem" Click="btn_remove_tabitem_Click" Width="80" Height="40" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent">
+                    <Image Source="/Images/261368-200.png" />
                 </Button>
             </StackPanel>
         </Grid>
