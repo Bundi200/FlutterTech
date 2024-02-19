@@ -44,13 +44,24 @@ namespace MiniProjects.MVVM.View
 
         private void btn_remove_tabitem_Click(object sender, RoutedEventArgs e)
         {
+            List<TabControl> controlsToRemove = new List<TabControl>();
             if (btn_remove_tabitem != null)
             {
-                TabItem tabItem = (TabItem)sender;
-                //if () 
-                //{
-
-                //}
+                foreach(var item in tabcontrol.Items)
+                { 
+                    if (item is TabControl tabControl)
+                    {
+                        TabItem tabItem = tabcontrol.Items.OfType<TabItem>().FirstOrDefault();
+                        if (tabItem != null) 
+                        {
+                            controlsToRemove.Add(tabControl);
+                        }
+                    }
+                }
+                foreach (Control controlToRemove in controlsToRemove)
+                {
+                    tabcontrol.Items.Remove(controlToRemove);
+                }
             }
         }
     }
