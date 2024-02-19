@@ -31,7 +31,7 @@ namespace MiniProjects.MVVM.View
             if (btn_add_tabitem != null) 
             {
                 TabItem tabItem = new TabItem();
-                tabItem.Height = 40;
+                tabItem.Height = 30;
                 tabItem.Width = 100;
 
                 InkCanvas inkCanvas = new InkCanvas();

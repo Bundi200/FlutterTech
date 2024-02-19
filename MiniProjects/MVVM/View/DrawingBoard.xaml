@@ -6,7 +6,7 @@
              
              xmlns:local="clr-namespace:MiniProjects.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="1000">
+             d:DesignHeight="700" d:DesignWidth="1500">
     <Border CornerRadius="10" Background="#FF2CB586">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -18,23 +18,28 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TabControl Grid.Column="0" Grid.Row="1" x:Name="tabcontrol" Background="Transparent" Height="640" >
+            <Border Grid.Row="1" Background="Black" CornerRadius="10" Margin="40,0,0,0" Width="1400" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TabControl Grid.Column="0" Grid.Row="1" x:Name="tabcontrol" Background="Transparent" Height="700" BorderBrush="Transparent" Margin="5">
 
 
                 <TabItem Header="Welcome Page" Background="Green" >
-                    <Border Height="640" Width="1000">
-                        <Image Source="/Images/backiee-189646.jpg"/>
+                    <Border Height="700" Width="1400">
+                            <Grid>
+                                <Image Source="/Images/backiee-189646.jpg"/>
+                                <Label Content="Welcome" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                       FontSize="100" FontFamily="Bauhaus 93">
+                                    
+                                </Label>
+                            </Grid>                        
+                            
                         <Border.Clip>
-                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,1000,640"/>
+                            <RectangleGeometry RadiusX="1000" RadiusY="110" Rect="0,0,1400,700"/>
                         </Border.Clip>
                     </Border>
-                    
                 </TabItem>
-                
-
-
-            </TabControl>
-
+                </TabControl>
+            </Border>
+            
             <StackPanel Orientation="Horizontal">
                 <Button Grid.Row="0" x:Name="btn_add_tabitem" Click="Button_Click" Content="+" Width="20" Height="20" HorizontalAlignment="Left"></Button>
 
