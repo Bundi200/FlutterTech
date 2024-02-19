@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
              xmlns:local="clr-namespace:MiniProjects.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1000">
@@ -20,17 +21,31 @@
             <!--<InkCanvas Grid.Column="0" Grid.Row="1" x:Name="Drawing_Board" />-->
             
 
-            <TabControl Grid.Column="0" Grid.Row="1" x:Name="tabcontrol" Background="Gray" Height="400">
+            <TabControl Grid.Column="0" Grid.Row="1" x:Name="tabcontrol" Background="Gray" Height="400" >
 
+                
                 <TabItem Header="Test1" >
-                    <InkCanvas Grid.Column="0" Grid.Row="1" x:Name="Drawing_Board1"  />
+                    <InkCanvas x:Name="Drawing_Board1"  />
                 </TabItem>
                 <TabItem Header="Test2">
-                    <InkCanvas Grid.Column="0" Grid.Row="1" x:Name="Drawing_Board2"  />
+                    <InkCanvas x:Name="Drawing_Board2"  />
                 </TabItem>
+                
 
             </TabControl>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Grid.Row="0" x:Name="btn_add_tabitem" Click="Button_Click" Content="+" Width="20" Height="20" HorizontalAlignment="Left"></Button>
+
+                <Button Grid.Row="0" x:Name="btn_remove_tabitem" Click="btn_remove_tabitem_Click" Content="-" Width="20" Height="20" HorizontalAlignment="Left">
+                    
+                </Button>
+            </StackPanel>
+            
+
+            
         </Grid>
+        
 
     </Border>
 </UserControl>

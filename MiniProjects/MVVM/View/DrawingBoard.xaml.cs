@@ -25,11 +25,33 @@ namespace MiniProjects.MVVM.View
         {
             InitializeComponent();
         }
-        private void Main_Menu_Click(object sender, RoutedEventArgs e)
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //var newWindow = new Applications.MainWindow();
-            //newWindow.Show();
-            //this.Close();
+            if (btn_add_tabitem != null) 
+            {
+                TabItem tabItem = new TabItem();
+
+                InkCanvas inkCanvas = new InkCanvas();
+
+                tabItem.Content = inkCanvas;
+
+                tabcontrol.Items.Add(tabItem);
+
+                
+            }
+        }
+
+        private void btn_remove_tabitem_Click(object sender, RoutedEventArgs e)
+        {
+            if (btn_remove_tabitem != null)
+            {
+                TabItem tabItem = (TabItem)sender;
+                //if () 
+                //{
+
+                //}
+            }
         }
     }
 }
