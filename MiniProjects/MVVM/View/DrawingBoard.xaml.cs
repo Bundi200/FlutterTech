@@ -31,6 +31,8 @@ namespace MiniProjects.MVVM.View
             if (btn_add_tabitem != null) 
             {
                 TabItem tabItem = new TabItem();
+                tabItem.Height = 40;
+                tabItem.Width = 100;
 
                 InkCanvas inkCanvas = new InkCanvas();
 
@@ -44,17 +46,17 @@ namespace MiniProjects.MVVM.View
 
         private void btn_remove_tabitem_Click(object sender, RoutedEventArgs e)
         {
-            List<TabControl> controlsToRemove = new List<TabControl>();
-            if (btn_remove_tabitem != null)
+            List<TabItem> controlsToRemove = new List<TabItem>();
+            if (btn_remove_tabitem != null && tabcontrol.SelectedItem is TabItem focusedTabItem)
             {
-                foreach(var item in tabcontrol.Items)
-                { 
-                    if (item is TabControl tabControl)
+                foreach (var item in tabcontrol.Items)
+                {
+                    if (item is TabItem tabItem)
                     {
-                        TabItem tabItem = tabcontrol.Items.OfType<TabItem>().FirstOrDefault();
-                        if (tabItem != null) 
+                        if (tabItem == focusedTabItem)
                         {
-                            controlsToRemove.Add(tabControl);
+                            controlsToRemove.Add(tabItem);
+                            break;
                         }
                     }
                 }

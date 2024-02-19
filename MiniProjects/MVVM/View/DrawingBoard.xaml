@@ -18,19 +18,20 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!--<InkCanvas Grid.Column="0" Grid.Row="1" x:Name="Drawing_Board" />-->
-            
+            <TabControl Grid.Column="0" Grid.Row="1" x:Name="tabcontrol" Background="Transparent" Height="640" >
 
-            <TabControl Grid.Column="0" Grid.Row="1" x:Name="tabcontrol" Background="Gray" Height="400" >
 
-                
-                <TabItem Header="Test1" >
-                    <InkCanvas x:Name="Drawing_Board1"  />
+                <TabItem Header="Welcome Page" Background="Green" >
+                    <Border Height="640" Width="1000">
+                        <Image Source="/Images/backiee-189646.jpg"/>
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,1000,640"/>
+                        </Border.Clip>
+                    </Border>
+                    
                 </TabItem>
-                <TabItem Header="Test2">
-                    <InkCanvas x:Name="Drawing_Board2"  />
-                </TabItem>
                 
+
 
             </TabControl>
 
@@ -38,14 +39,9 @@
                 <Button Grid.Row="0" x:Name="btn_add_tabitem" Click="Button_Click" Content="+" Width="20" Height="20" HorizontalAlignment="Left"></Button>
 
                 <Button Grid.Row="0" x:Name="btn_remove_tabitem" Click="btn_remove_tabitem_Click" Content="-" Width="20" Height="20" HorizontalAlignment="Left">
-                    
+
                 </Button>
             </StackPanel>
-            
-
-            
         </Grid>
-        
-
     </Border>
 </UserControl>
