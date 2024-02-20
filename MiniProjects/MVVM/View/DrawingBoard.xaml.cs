@@ -17,24 +17,25 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
 
-//[Serializable]
-//public class DynamicListState
-//{
-//    public string LabelText { get; set; }
-//    public string TextBoxText { get; set; }
-//    public bool CheckBoxChecked { get; set; }
-//    // Add more properties as needed for your dynamic panel data
-//}
+[Serializable]
+public class DynamicTabControl
+{
+    public InkCanvas InkCanvas { get; set; }
+    public object TabItems { get; set; }
+    public bool CheckBoxChecked { get; set; }
+    // Add more properties as needed for your dynamic panel data
+}
 
-//[Serializable]
-//public class WindowState
-//{
-//    public List<DynamicListState> DynamicListsStates { get; set; }
-//    public List<string> TextBoxTexts { get; set; }
-//    public bool CheckBoxChecked { get; set; }
+[Serializable]
+public class WindowState1
+{
+    
+    public List<DynamicTabControl> dynamicTabControl { get; set; }
+    public List<object> TabItems { get; set; }
 
-//    // Add more properties as needed for your form data
-//}
+
+    // Add more properties as needed for your form data
+}
 
 namespace MiniProjects.MVVM.View
 {
@@ -43,6 +44,8 @@ namespace MiniProjects.MVVM.View
     /// </summary>
     public partial class DrawingBoard : UserControl
     {
+
+        public WindowState windowstate = new WindowState();
         public DrawingBoard()
         {
             InitializeComponent();
@@ -93,24 +96,24 @@ namespace MiniProjects.MVVM.View
         //    try
         //    {
         //        // Save dynamic panel states
-        //        windowstate.DynamicListsStates = new List<DynamicListState>();
-        //        foreach (Control control in TC_DrawingBoard.Items)
+        //        windowstate.DynamicTabControl = new List<DynamicTabControl>();
+        //        foreach (Control control in tabcontrol.Items)
         //        {
-        //            if (control is ListBox panel)
+        //            if (control is TabControl Tabs)
         //            {
-        //                DynamicListState dynamicPanelState = new DynamicListState
+        //                DynamicTabControl dynamicTabControl = new DynamicTabControl
         //                {
-        //                    TextBoxText = panel.Items.OfType<TextBox>().FirstOrDefault()?.Text,
-        //                    CheckBoxChecked = panel.Items.OfType<CheckBox>().FirstOrDefault()?.IsChecked ?? false,
+        //                    TabItems = Tabs.Items.OfType<TabItem>().FirstOrDefault()?.Content,
+        //                    InkCanvas = Tabs.Items.OfType<InkCanvas>().FirstOrDefault(),
         //                    //LabelText = panel.Items.OfType<Label>().FirstOrDefault().Content
 
         //                };
-        //                windowstate.DynamicListsStates.Add(dynamicPanelState);
+        //                windowstate.DynamicTabControl.Add(dynamicTabControl);
         //            }
         //        }
 
         //        // Save to a file
-        //        string filePath = "formState.dat";
+        //        string filePath = "DrawingBoardData.dat";
         //        using (FileStream fileStream = new FileStream(filePath, FileMode.Create))
         //        {
         //            IFormatter formatter = new BinaryFormatter();
@@ -122,5 +125,101 @@ namespace MiniProjects.MVVM.View
         //        MessageBox.Show("Failed to save form state: " + ex.Message);
         //    }
         //}
+
+        private void Window_Save()
+        {
+            try
+            {
+                windowstate.dynamicTabControl = new List<DynamicTabControl>();
+
+                foreach (TabControl tabControl in tabcontrol.Items.OfType<TabControl>())
+                {
+                    TabItem tabItem = tabControl.SelectedItem as TabItem;
+
+                    if (tabItem != null)
+                    {
+                        DynamicTabControl dynamicTabControl = new DynamicTabControl
+                        {
+                            TabItemHeader = tabItem.Header.ToString(),
+                            // Add other relevant properties of TabItem
+
+                            // Serialize the relevant information about InkCanvas
+                            InkCanvasData = SerializeInkCanvas(tabItem.Content as InkCanvas)
+                        };
+
+                        windowstate.dynamicTabControl.Add(dynamicTabControl);
+                    }
+                }
+
+                // Save to a file
+                string filePath = "DrawingBoardData.dat";
+                using (FileStream fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    IFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(fileStream, windowstate);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to save form state: " + ex.Message);
+            }
+        }
+
+        private byte[] SerializeInkCanvas(InkCanvas inkCanvas)
+        {
+            // Implement your serialization logic for InkCanvas here
+            // Convert relevant information to a byte array
+            // Example: using MemoryStream and BinaryWriter
+            using (MemoryStream stream = new MemoryStream())
+            {
+                using (BinaryWriter writer = new BinaryWriter(stream))
+                {
+                    // Write relevant information to the stream
+                    // Example: writer.Write(inkCanvas.SomeProperty);
+                }
+
+                return stream.ToArray();
+            }
+        }
+        public void Load()
+        {
+            try
+            {
+                string filePath = "DrawingBoardData.dat";
+                if (File.Exists(filePath))
+                {
+                    using (FileStream fileStream = new FileStream(filePath, FileMode.Open))
+                    {
+                        IFormatter formatter = new BinaryFormatter();
+                        windowstate = (WindowState1)formatter.Deserialize(fileStream);
+
+                        foreach (var dynamicTabControl in windowstate.dynamicTabControl)
+                        {
+                            TabItem tabItem = new TabItem();
+                            tabItem.Height = 30;
+                            tabItem.Width = 100;
+
+                            InkCanvas inkCanvas = new InkCanvas();
+
+                            tabItem.Content = inkCanvas;
+
+                            tabcontrol.Items.Add(tabItem);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load form state: " + ex.Message);
+            }
+        }
+        private void Window_Load(object sender, RoutedEventArgs e)
+        {
+            Load();
+        }
+        private void btn_Save_Click(object sender, RoutedEventArgs e)
+        {
+            Window_Save();
+        }
     }
 }
