@@ -138,7 +138,8 @@
                              Height="60"
                              Foreground="White"
                              FontSize="15"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding EmployeePromotionCommand}"/>
 
 
             </StackPanel>

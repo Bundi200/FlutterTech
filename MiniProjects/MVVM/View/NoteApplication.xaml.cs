@@ -29,6 +29,8 @@ public class DynamicListState
 [Serializable]
 public class WindowState
 {
+    //internal object dynamicTabControl;
+
     public List<DynamicListState> DynamicListsStates { get; set; }
     public List<string> TextBoxTexts { get; set; }
     public bool CheckBoxChecked { get; set; }

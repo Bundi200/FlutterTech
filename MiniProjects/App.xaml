@@ -23,6 +23,9 @@
             <DataTemplate DataType="{x:Type viewModel:DrawingBoardViewModel}">
                 <view:DrawingBoard/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:EmployeePromotionViewModel}">
+                <view:EmployeePromotion/>
+            </DataTemplate>
 
 
             <FontFamily x:Key="LabelFontFamily1">ROG Fonts</FontFamily>

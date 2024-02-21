@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="MiniProjects.MVVM.View.EmployeePromotion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MiniProjects.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border Background="#FFAFB548" CornerRadius="10">
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+
+
+            <TextBox Grid.Row="1" Grid.Column="0" x:Name="txt_ShowWhoPromoted"/>
+            <ComboBox Grid.Column="1" Grid.Row="1" x:Name="cmb_Promotion_Selection"/>
+            <ListBox Grid.Column="0" Grid.Row="2" Background="Gray" x:Name="lst_Employees"/>
+            <Button Grid.Column="1" Grid.Row="2" x:Name="btn_New_Employee" Content="New Employee" Click="btn_New_Employee_Click"/>
+            
+
+        </Grid>
+    </Border>
+</UserControl>

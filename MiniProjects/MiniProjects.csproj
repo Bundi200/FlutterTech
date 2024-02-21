@@ -105,6 +105,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\EmployeePromotion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\HomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +125,7 @@
   <ItemGroup>
     <Compile Include="MVVM\ViewModel\CalculatorViewModel.cs" />
     <Compile Include="MVVM\ViewModel\DrawingBoardViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\EmployeePromotionViewModel.cs" />
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\ViewModel\NoteApplicationViewModel.cs" />
@@ -129,6 +134,9 @@
     </Compile>
     <Compile Include="MVVM\View\DrawingBoard.xaml.cs">
       <DependentUpon>DrawingBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\EmployeePromotion.xaml.cs">
+      <DependentUpon>EmployeePromotion.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
