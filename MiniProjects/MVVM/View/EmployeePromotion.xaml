@@ -9,21 +9,15 @@
     <Border Background="#FFAFB548" CornerRadius="10">
         <Grid Margin="10">
             <Grid.ColumnDefinitions>
-
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-
-
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-
                 <RowDefinition Height="30"/>
                 <RowDefinition/>
                 <RowDefinition/>
-
             </Grid.RowDefinitions>
-
 
             <TextBox Grid.Row="1" Grid.Column="0" x:Name="txt_ShowWhoPromoted"/>
             <ComboBox Grid.Column="1" Grid.Row="1" x:Name="cmb_Promotion_Selection"/>
