@@ -14,17 +14,17 @@ namespace MiniProjects.MVVM.View
         {
             InitializeComponent();
         }
-        string Textbox1Constuctors;
-        string Textbox2Constuctors;
-        string Textbox3Constuctors;
-        string Textbox4Constuctors;
+        string _Textbox1Constuctors;
+        string _Textbox2Constuctors;
+        string _Textbox3Constuctors;
+        string _Textbox4Constuctors;
         public EmployeePromotion(string textbox1Constuctors, string textbox2Constuctors, string textbox3Constuctors, string textbox4Constuctors)
         {
             //"this" refers to an instance of this class, to an object of this class for more read ability
-            this.Textbox1Constuctors = textbox1Constuctors;
-            this.Textbox2Constuctors = textbox2Constuctors;
-            this.Textbox3Constuctors = textbox3Constuctors;
-            this.Textbox4Constuctors = textbox4Constuctors;
+            this._Textbox1Constuctors = textbox1Constuctors;
+            this._Textbox2Constuctors = textbox2Constuctors;
+            this._Textbox3Constuctors = textbox3Constuctors;
+            this._Textbox4Constuctors = textbox4Constuctors;
         }
 
         private void btn_New_Employee_Click(object sender, RoutedEventArgs e/* ,string textbox1Constuctors*/)

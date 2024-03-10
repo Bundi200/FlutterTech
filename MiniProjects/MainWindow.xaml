@@ -6,11 +6,12 @@
         xmlns:local="clr-namespace:MiniProjects"
         xmlns:viewModel="clr-namespace:MiniProjects.MVVM.ViewModel"
         mc:Ignorable="d"
-        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" Height="880" Width="1700">
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" Height="880" Width="1700" Margin="0">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
+    
     <Border Background ="#272637"  CornerRadius="20">
         <Grid>
             
@@ -34,6 +35,7 @@
                     <ColumnDefinition Width="300"/>
 
                 </Grid.ColumnDefinitions>
+                
 
                 <StackPanel x:Name="sp_Buttons" Grid.Row="0" Grid.Column="3" Orientation="Horizontal" Background="Transparent">
 

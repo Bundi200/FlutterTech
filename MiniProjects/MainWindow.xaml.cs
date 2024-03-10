@@ -20,11 +20,46 @@ namespace MiniProjects
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool isDragging = false;
+        private Point offset;
         public MainWindow()
         {
             InitializeComponent();
             UpdateLabel();
+
+            
+            MouseLeftButtonDown += Window_MouseLeftButtonDown;
+            MouseMove += Window_MouseMove;
+            MouseLeftButtonUp += Window_MouseLeftButtonUp;
         }
+
+        private void Window_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point point = e.GetPosition(this);
+                double newLeft = point.X - offset.X + Left;
+                double newTop = point.Y - offset.Y + Top;
+                Left = newLeft;
+                Top = newTop;
+            }
+        }
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                isDragging = true;
+                offset = e.GetPosition(this);
+            }
+        }
+        private void Window_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                isDragging = false;
+            }
+        }
+
         //test hogy le ment e?
         public void UpdateLabel()
         {

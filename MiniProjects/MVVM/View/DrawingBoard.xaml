@@ -20,7 +20,7 @@
 
             <Border  Grid.Row="1" Background="Black" CornerRadius="10" Margin="40,0,0,0" Width="1400" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TabControl  Grid.Column="0" Grid.Row="1" x:Name="tabcontrol" Background="Transparent" Height="700" BorderBrush="Transparent" Margin="5">
-                <TabItem Header="Welcome Page" Background="Green">
+                <TabItem Header="Welcome Page" Background="Green" IsManipulationEnabled="False">
                     <Border Height="700" Width="1400">
                             <Grid>
                                 <Image Source="/Images/backiee-189646.jpg"/>

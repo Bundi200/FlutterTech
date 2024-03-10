@@ -50,6 +50,7 @@ namespace MiniProjects.MVVM.View
         {
             InitializeComponent();
         }
+        ~NoteApplication() { }
 
         private void chk_CheckAll_Click(object sender, RoutedEventArgs e)
         {
