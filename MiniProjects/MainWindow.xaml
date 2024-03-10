@@ -50,7 +50,7 @@
                         <Border.Clip>
                             <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
                         </Border.Clip>
-                        <Button Height="42" Width="42" Margin="0" Background="Yellow" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_restore_down"> </Button>
+                        <Button Height="42" Width="42" Margin="0" Background="Yellow" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_restore_down" Content="O" FontSize="20" x:Name="btn_restore"> </Button>
                         
                         
                     </Border>

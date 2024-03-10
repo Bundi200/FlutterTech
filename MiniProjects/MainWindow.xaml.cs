@@ -101,7 +101,22 @@ namespace MiniProjects
         }
         private void btn_restore_down(object sender, RoutedEventArgs e)
         {
-            WindowState = System.Windows.WindowState.Maximized;
+            //WindowState = System.Windows.WindowState.Maximized;
+
+            if (btn_restore != null)
+            {
+                if (WindowState != System.Windows.WindowState.Maximized)
+                {
+                    WindowState = System.Windows.WindowState.Maximized;
+                }
+
+                if (WindowState == System.Windows.WindowState.Maximized)
+                {
+                    WindowState = System.Windows.WindowState.Normal;
+                }
+            }
+            
+
         }
     }
 }
