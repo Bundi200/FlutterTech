@@ -27,7 +27,6 @@ namespace MiniProjects
             InitializeComponent();
             UpdateLabel();
 
-            
             MouseLeftButtonDown += Window_MouseLeftButtonDown;
             MouseMove += Window_MouseMove;
             MouseLeftButtonUp += Window_MouseLeftButtonUp;
@@ -78,17 +77,9 @@ namespace MiniProjects
 
         public void Buttons()
         {
-
             Button btnClose = new Button();
-
-
             Button btnRestoreDown = new Button();
-
-
             Button btnMinimise = new Button();
-
-            
-
         }
 
         private void btn_close(object sender, RoutedEventArgs e)
@@ -109,14 +100,11 @@ namespace MiniProjects
                 {
                     WindowState = System.Windows.WindowState.Maximized;
                 }
-
-                if (WindowState == System.Windows.WindowState.Maximized)
+                else
                 {
                     WindowState = System.Windows.WindowState.Normal;
-                }
+                }                
             }
-            
-
         }
     }
 }
