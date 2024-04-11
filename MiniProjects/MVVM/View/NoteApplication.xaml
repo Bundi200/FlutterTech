@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MiniProjects.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="{x:Static SystemParameters.PrimaryScreenHeight}" d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}" Background="Transparent" Loaded="Window_Load">
+             Background="Transparent" Loaded="Window_Load">
     <Border CornerRadius="10" Background="#844eff">
 
         <Grid x:Name="grd_Grid" Margin= "10">

@@ -109,8 +109,7 @@
                              FontSize="15"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
-                             Command="{Binding HomeCommand}"
-                             />
+                             Command="{Binding HomeCommand}"/>
                 
                 <RadioButton Content="Note Application"
                              Height="60"
