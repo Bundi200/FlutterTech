@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MiniProjects"
         xmlns:viewModel="clr-namespace:MiniProjects.MVVM.ViewModel"
         mc:Ignorable="d"
-        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" Height="880" Width="1700" Margin="0">
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" Height="{x:Static SystemParameters.FullPrimaryScreenHeight}" Width="{x:Static SystemParameters.PrimaryScreenWidth}" Margin="0">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
@@ -17,13 +17,13 @@
             
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="1500"/>
+                <ColumnDefinition Width="Auto"/>
 
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
-                <RowDefinition Height="790"/>
+                <RowDefinition Height="Auto"/>
 
 
             </Grid.RowDefinitions>
