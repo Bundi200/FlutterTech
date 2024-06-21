@@ -17,19 +17,19 @@
             
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
 
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
 
 
             </Grid.RowDefinitions>
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="300"/>
                     <ColumnDefinition Width="300"/>
                     <ColumnDefinition Width="300"/>
@@ -147,7 +147,8 @@
 
             <ContentControl Grid.Row="1" 
                             Grid.Column="1"
-                            Margin="10"
+                            Margin="3,3,3,3"
+                            
                             Content="{Binding CurrentView}"/>
 
         </Grid>

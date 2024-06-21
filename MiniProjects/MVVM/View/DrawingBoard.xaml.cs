@@ -16,10 +16,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
+using System.Xml;
 
 [Serializable]
 public class DynamicTabControl
 {
+    
     public InkCanvas InkCanvas { get; set; }
     public string TabItemHeader { get; set; } // Assuming the header is a string
     public bool CheckBoxChecked { get; set; }
@@ -44,10 +46,21 @@ namespace MiniProjects.MVVM.View
     public partial class DrawingBoard : UserControl
     {
 
+        int Width_number;
+        int Height_number;
+
+        
+
         public WindowState windowstate = new WindowState();
+
         public DrawingBoard()
         {
             InitializeComponent();
+        }
+        public DrawingBoard(int width_number, int height_number)
+        {
+            this.Width_number = width_number;
+            this.Height_number = height_number;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -58,9 +71,14 @@ namespace MiniProjects.MVVM.View
                 tabItem.Height = 30;
                 tabItem.Width = 100;
 
+                
+
                 InkCanvas inkCanvas = new InkCanvas();
+                inkCanvas.Width = this.Width_number;
+
 
                 tabItem.Content = inkCanvas;
+                
 
                 tabcontrol.Items.Add(tabItem);                
             }
@@ -89,6 +107,23 @@ namespace MiniProjects.MVVM.View
             }
         }
 
+        private void txt_Height(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = new TextBox();
+            string textBoxValue = textBox.Text;
+            int number = int.Parse(textBoxValue);
+
+            this.Height_number = number;
+        }
+        private void txt_Width(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = new TextBox();
+            string textBoxValue = textBox.Text;
+            int number = int.Parse(textBoxValue);
+
+            this.Width_number = number;
+        }
+        
 
         //private void Window_Save()
         //{

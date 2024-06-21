@@ -10,7 +10,7 @@
     <Border CornerRadius="10" Background="#FF2CB586">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1450"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -18,10 +18,10 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Border  Grid.Row="1" Background="Black" CornerRadius="10" Margin="40,0,0,0" Width="1400" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Border  Grid.Row="1" Background="Black" CornerRadius="10" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TabControl  Grid.Column="0" Grid.Row="1" x:Name="tabcontrol" Background="Transparent" Height="700" BorderBrush="Transparent" Margin="5">
-                <TabItem Header="Welcome Page" Background="Green" IsManipulationEnabled="False">
-                    <Border Height="700" Width="1400">
+                <TabItem Header="Welcome Page" Background="Green" IsManipulationEnabled="True">
+                    <Border >
                             <Grid>
                                 <Image Source="/Images/backiee-189646.jpg"/>
                                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -47,6 +47,8 @@
                 <Button Grid.Row="0" x:Name="btn_remove_tabitem" Click="btn_remove_tabitem_Click" Width="80" Height="40" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent">
                     <Image Source="/Images/261368-200.png" />
                 </Button>
+                <TextBox Grid.Row="0" Width="80" Height="40" x:Name="txt_Hight"></TextBox>
+                <TextBox Grid.Row="0" Width="80" Height="40" x:Name="txt_Width"></TextBox>
             </StackPanel>
         </Grid>
     </Border>
