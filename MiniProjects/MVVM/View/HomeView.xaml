@@ -56,10 +56,12 @@
                     Height="200"
                     Margin="50,0,0,0"
                     CornerRadius="10">
+                
+                <Image Source="/Images/test1.png" />
 
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#FF8A7F01" Offset="0.0"/>
+                        <GradientStop Color="#9c5ad8" Offset="0.0"/>
                         <GradientStop Color="#FFF7E7BC" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>

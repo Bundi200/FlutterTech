@@ -116,7 +116,7 @@ namespace MiniProjects.MVVM.View
             }
             else
             {
-                WidthNumber = 1000; // Default value if parsing fails
+                WidthNumber = 1980; // Default value if parsing fails
             }
         }
 
@@ -128,7 +128,7 @@ namespace MiniProjects.MVVM.View
             }
             else
             {
-                HeightNumber = 1000; // Default value if parsing fails
+                HeightNumber = 1080; // Default value if parsing fails
             }
         }
 

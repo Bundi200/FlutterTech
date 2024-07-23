@@ -38,8 +38,11 @@
                 </TabItem>
                 </TabControl>
             </Border>
-            
+
             <StackPanel Orientation="Horizontal" Background="AliceBlue">
+                <Image Source="/Images/test1.png" />
+
+                
                 <Button Grid.Row="0" x:Name="btn_add_tabitem" Click="Button_Click" Width="90" Height="50" HorizontalAlignment="Left" Margin="10,0,0,0" Background="Transparent" BorderBrush="Transparent">
                     <Image Source="/Images/44455.png" Width="60" Height="50" Margin="0,-2,0,0"/>
                 </Button>
@@ -50,14 +53,15 @@
 
 
                 <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    
                     <Label Content="Height" Width="60" Height="40" FontSize="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Bauhaus 93"/>
                     <TextBox Grid.Row="0" Width="80" Height="40" x:Name="txt_HightOfDrawingBoard" 
-                             TextChanged="txt_HightOfDrawingBoard_TextChanged" Text="(Delete this)" 
+                             TextChanged="txt_HightOfDrawingBoard_TextChanged" Text="1980" 
                              FontFamily="Bauhaus 93" ></TextBox>
-                    <Rectangle Width="10" Fill="Black" Margin="5,0,0,0"></Rectangle>
+                    <Rectangle Width="10" Fill="Black" Margin="6,0,0,0"></Rectangle>
                     <Label Content="Width" Width="60" Height="40" FontSize="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Bauhaus 93"/>
                     <TextBox Grid.Row="0" Width="80" Height="40" x:Name="txt_WidthOfDrawingBoard" 
-                             TextChanged ="txt_WidthOfDrawingBoard_TextChanged" Text="(Delete this)" 
+                             TextChanged ="txt_WidthOfDrawingBoard_TextChanged" Text="1080" 
                              FontFamily="Bauhaus 93"/>
                 </StackPanel>
             </StackPanel>

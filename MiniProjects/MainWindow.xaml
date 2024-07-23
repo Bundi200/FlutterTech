@@ -96,7 +96,9 @@
 
 
 
-            <Label Content="Mini Projects"
+            <Image Source="/Images/test1.png" Margin="100,0,0,0"/>
+    
+            <Label Content="FlutterTech"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    Foreground="White"
