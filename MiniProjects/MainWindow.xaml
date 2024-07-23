@@ -11,10 +11,11 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
-    
-    <Border Background ="#272637"  CornerRadius="20">
+
+    <Border CornerRadius="20" BorderThickness="3" BorderBrush="White">
+        <Border Background ="#272637" CornerRadius="20">
         <Grid>
-            
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
@@ -35,7 +36,7 @@
                     <ColumnDefinition Width="300"/>
 
                 </Grid.ColumnDefinitions>
-                
+
 
                 <StackPanel x:Name="sp_Buttons" Grid.Row="0" Grid.Column="3" Orientation="Horizontal" Background="Transparent">
 
@@ -46,13 +47,14 @@
                         <Button Height="42" Width="42" Margin="0" Background="Green" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_Minimise"
                                 Content="-" FontSize="30"></Button>
                     </Border>
+
                     <Border Height="40" Width="40" Margin="40,10,10,10" Background="White" >
                         <Border.Clip>
                             <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
                         </Border.Clip>
-                        <Button Height="42" Width="42" Margin="0" Background="Yellow" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_restore_down" Content="O" FontSize="20" x:Name="btn_restore"> </Button>
-                        
-                        
+                        <Button Height="42" Width="42" Margin="0" Background="Yellow" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btn_restore_down" 
+                                Content="O" FontSize="20" x:Name="btn_restore"></Button>
+
                     </Border>
                     <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
                         <Border.Clip>
@@ -61,7 +63,7 @@
                         <Button Height="42" Width="42" Margin="0" Background="Red" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_close"
                                 Content="X" FontSize="20"></Button>
                     </Border>
-                
+
                 </StackPanel>
 
                 <Label Grid.Column="1" 
@@ -91,8 +93,8 @@
                 </Label>
             </Grid>
 
-            
-            
+
+
 
             <Label Content="Mini Projects"
                    HorizontalAlignment="Center"
@@ -110,7 +112,7 @@
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
                              Command="{Binding HomeCommand}"/>
-                
+
                 <RadioButton Content="Note Application"
                              Height="60"
                              Foreground="White"
@@ -118,7 +120,7 @@
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="False"
                              Command="{Binding NoteCommand}"/>
-                
+
                 <RadioButton Content="Calculator"
                              Height="60"
                              Foreground="White"
@@ -126,7 +128,7 @@
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="False"
                              Command="{Binding CalculatorCommand}"/>
-                
+
                 <RadioButton Content="Drawing Board"
                              Height="60"
                              Foreground="White"
@@ -152,5 +154,6 @@
                             Content="{Binding CurrentView}"/>
 
         </Grid>
+    </Border>
     </Border>
 </Window>
