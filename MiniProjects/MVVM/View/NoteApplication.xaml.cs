@@ -124,7 +124,10 @@ namespace MiniProjects.MVVM.View
                 textbox.Padding = new Thickness(2);
                 textbox.MaxHeight = 500;
                 textbox.MinHeight = 200;
+                textbox.MinWidth = 1000;
                 
+
+
 
                 dynamicPanel.Items.Add(textbox);
                 dynamicPanel.Items.Add(checkBox);
@@ -294,7 +297,9 @@ namespace MiniProjects.MVVM.View
                             textbox.Padding = new Thickness(2);
                             textbox.MaxHeight = 500;
                             textbox.MinHeight = 200;
-                            
+                            textbox.MinWidth = 1000;
+                            textbox.MaxWidth = SystemParameters.PrimaryScreenWidth;
+
 
                             dynamicPanel.Items.Add(textbox);
                             dynamicPanel.Items.Add(checkBox);
