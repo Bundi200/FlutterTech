@@ -35,7 +35,7 @@ public class WindowState1
     public List<object> TabItems { get; set; }
 
 
-    // Add more properties as needed for your form data
+    
 }
 
 namespace MiniProjects.MVVM.View
@@ -46,10 +46,10 @@ namespace MiniProjects.MVVM.View
     public partial class DrawingBoard : UserControl
     {
 
-        int Width_number;
-        int Height_number;
+        private int WidthNumber { get; set; }
+        private int HeightNumber { get; set; }
 
-        
+
 
         public WindowState windowstate = new WindowState();
 
@@ -57,10 +57,10 @@ namespace MiniProjects.MVVM.View
         {
             InitializeComponent();
         }
-        public DrawingBoard(int width_number, int height_number)
+        public DrawingBoard(int widthnumber, int heightnumber)
         {
-            this.Width_number = width_number;
-            this.Height_number = height_number;
+            this.WidthNumber = widthnumber;
+            this.HeightNumber = heightnumber;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -70,11 +70,13 @@ namespace MiniProjects.MVVM.View
                 TabItem tabItem = new TabItem();
                 tabItem.Height = 30;
                 tabItem.Width = 100;
+                
 
                 
 
                 InkCanvas inkCanvas = new InkCanvas();
-                inkCanvas.Width = this.Width_number;
+                inkCanvas.Width = WidthNumber;
+                inkCanvas.Height = HeightNumber;
 
 
                 tabItem.Content = inkCanvas;
@@ -106,24 +108,30 @@ namespace MiniProjects.MVVM.View
                 }
             }
         }
-
-        private void txt_Height(object sender, RoutedEventArgs e)
+        private void txt_WidthOfDrawingBoard_TextChanged(object sender, TextChangedEventArgs e)
         {
-            TextBox textBox = new TextBox();
-            string textBoxValue = textBox.Text;
-            int number = int.Parse(textBoxValue);
-
-            this.Height_number = number;
+            if (int.TryParse(txt_WidthOfDrawingBoard.Text, out int width))
+            {
+                WidthNumber = width;
+            }
+            else
+            {
+                WidthNumber = 1000; // Default value if parsing fails
+            }
         }
-        private void txt_Width(object sender, RoutedEventArgs e)
+
+        private void txt_HightOfDrawingBoard_TextChanged(object sender, TextChangedEventArgs e)
         {
-            TextBox textBox = new TextBox();
-            string textBoxValue = textBox.Text;
-            int number = int.Parse(textBoxValue);
-
-            this.Width_number = number;
+            if (int.TryParse(txt_HightOfDrawingBoard.Text, out int height))
+            {
+                HeightNumber = height;
+            }
+            else
+            {
+                HeightNumber = 1000; // Default value if parsing fails
+            }
         }
-        
+
 
         //private void Window_Save()
         //{
@@ -178,5 +186,6 @@ namespace MiniProjects.MVVM.View
         {
             Window_Save();
         }
+
     }
 }
