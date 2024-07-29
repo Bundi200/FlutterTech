@@ -59,7 +59,7 @@ namespace MiniProjects
             }
         }
 
-        //test hogy le ment e?
+        
         public void UpdateLabel()
         {
             int i = 0;
@@ -92,7 +92,7 @@ namespace MiniProjects
         }
         private void btn_restore_down(object sender, RoutedEventArgs e)
         {
-            //WindowState = System.Windows.WindowState.Maximized;
+            
 
             if (btn_restore != null)
             {
@@ -105,6 +105,11 @@ namespace MiniProjects
                     WindowState = System.Windows.WindowState.Normal;
                 }                
             }
+        }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            
         }
     }
 }

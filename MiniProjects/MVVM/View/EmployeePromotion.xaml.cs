@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -29,7 +30,7 @@ namespace MiniProjects.MVVM.View
 
         private void btn_New_Employee_Click(object sender, RoutedEventArgs e/* ,string textbox1Constuctors*/)
         {
-            List<Employee> list = new List<Employee>();
+            
 
             if (btn_New_Employee != null)
             {
@@ -261,6 +262,7 @@ namespace MiniProjects.MVVM.View
                 Grid.SetColumn(label2, 1);
                 Grid.SetColumn(label3, 2);
                 Grid.SetColumn(label4, 3);
+
                 // Add TextBox controls to the Grid
                 grid.Children.Add(textbox1);
                 grid.Children.Add(textbox2);
@@ -276,43 +278,60 @@ namespace MiniProjects.MVVM.View
                 lst_Employees.Items.Add(dynamicPanel);
 
 
-                List<EmployeePromotion> empList1 = new List<EmployeePromotion>();
-                empList1.Add(new EmployeePromotion() { });
+                List<Employee> empList1 = new List<Employee>();
+                empList1.Add(new Employee() { });
             }
         }
+        private void cmb_Promotion_Selection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+            
 
-        public static void EmployeeLogic()
+        }
+
+        public void EmployeeLogic()
         {
             EmployeePromotion employeePromotion = new EmployeePromotion();
 
-            List<Employee> empList = new List<Employee>();
+            //List<Employee> empList = new List<Employee>();
 
-            empList.Add(new Employee() { ID = 1, Name = "Mark", Salary = 5000, Experience = 5 });
-            empList.Add(new Employee() { ID = 1, Name = "Pat", Salary = 7000, Experience = 1 });
-            empList.Add(new Employee() { ID = 1, Name = "Gab", Salary = 1000, Experience = 4 });
-            empList.Add(new Employee() { ID = 1, Name = "Abel", Salary = 60000, Experience = 20 });
-            empList.Add(new Employee() { });
+            //empList.Add(new Employee() { ID = 1, Name = "Mark", Salary = 5000, Experience = 5 });
+            //empList.Add(new Employee() { ID = 1, Name = "Pat", Salary = 7000, Experience = 1 });
+            //empList.Add(new Employee() { ID = 1, Name = "Gab", Salary = 1000, Experience = 4 });
+            //empList.Add(new Employee() { ID = 1, Name = "Abel", Salary = 60000, Experience = 20 });
+            //empList.Add(new Employee() { });
 
 
-            List<EmployeePromotion> empList1 = new List<EmployeePromotion>();
-            empList1.Add(new EmployeePromotion() { });
+            //List<EmployeePromotion> empList1 = new List<EmployeePromotion>();
+            //empList1.Add(new EmployeePromotion() { });
 
-            IsPromotable isPromotable = new IsPromotable(IsPromotoable);
+            
 
-            Employee.Promotion(empList, isPromotable);
+
+            Employee.Promotion(empList1, emp => emp.Experience >= 5);
+
+
+
+
 
             List<ListBox> controlsToRemove = new List<ListBox>();
 
-            //foreach (var item in lst_Employees(employeePromotion).Items)
-            //{
-            //    if (item is ListBox listbox)
-            //    {
-            //        TextBox associatedCheckBox = listbox.Items.OfType<TextBox>().FirstOrDefault();
-            //        empList.Add(new Employee() { associatedCheckBox.Text });
-            //    }
-            //}
+
+            
+
+            foreach (var item in lst_Employees(employeePromotion).Items)
+            {
+                if (item is ListBox listbox)
+                {
+                    TextBox associatedCheckBox = listbox.Items.OfType<TextBox>().FirstOrDefault();
+                    empList1.Add(new Employee() { associatedCheckBox.Text });
+                }
+            }
+
+
         }
-        public static bool IsPromotoable(Employee emp)
+
+        public static bool IsPromotoableExperience(Employee emp)
         {
             if (emp.Experience >= 5)
             {
@@ -323,8 +342,23 @@ namespace MiniProjects.MVVM.View
                 return false;
             }
         }
+        public static bool IsPromotoableSalary(Employee emp)
+        {
+            if (emp.Salary >= 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
     }
+
     public delegate bool IsPromotable(Employee PromoteEmployee);
+
 
     public class Employee : EmployeePromotion
     {

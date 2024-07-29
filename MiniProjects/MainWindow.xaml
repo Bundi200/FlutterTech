@@ -12,61 +12,64 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border CornerRadius="20" BorderThickness="3" BorderBrush="White">
+    
+    
+    <Border CornerRadius="20" BorderThickness="3" BorderBrush="White" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        
         <Border Background ="#272637" CornerRadius="20">
-        <Grid>
+            <Grid>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="*"/>
-
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="*"/>
-
-
-            </Grid.RowDefinitions>
-            <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="300"/>
-                    <ColumnDefinition Width="300"/>
-                    <ColumnDefinition Width="300"/>
 
                 </Grid.ColumnDefinitions>
 
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="*"/>
 
-                <StackPanel x:Name="sp_Buttons" Grid.Row="0" Grid.Column="3" Orientation="Horizontal" Background="Transparent">
 
-                    <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
-                        <Border.Clip>
-                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
-                        </Border.Clip>
-                        <Button Height="42" Width="42" Margin="0" Background="Green" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_Minimise"
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="300"/>
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <StackPanel x:Name="sp_Buttons" Grid.Row="0" Grid.Column="3" Orientation="Horizontal" Background="Transparent">
+
+                        <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
+                            </Border.Clip>
+                            <Button Height="42" Width="42" Margin="0" Background="Green" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_Minimise"
                                 Content="-" FontSize="30"></Button>
-                    </Border>
+                        </Border>
 
-                    <Border Height="40" Width="40" Margin="40,10,10,10" Background="White" >
-                        <Border.Clip>
-                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
-                        </Border.Clip>
-                        <Button Height="42" Width="42" Margin="0" Background="Yellow" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btn_restore_down" 
+                        <Border Height="40" Width="40" Margin="40,10,10,10" Background="White" >
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
+                            </Border.Clip>
+                            <Button Height="42" Width="42" Margin="0" Background="Yellow" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btn_restore_down" 
                                 Content="O" FontSize="20" x:Name="btn_restore"></Button>
 
-                    </Border>
-                    <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
-                        <Border.Clip>
-                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
-                        </Border.Clip>
-                        <Button Height="42" Width="42" Margin="0" Background="Red" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_close"
+                        </Border>
+                        <Border Height="40" Width="40" Margin="40,10,10,10" Background="White">
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40"/>
+                            </Border.Clip>
+                            <Button Height="42" Width="42" Margin="0" Background="Red" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_close"
                                 Content="X" FontSize="20"></Button>
-                    </Border>
+                        </Border>
 
-                </StackPanel>
+                    </StackPanel>
 
-                <Label Grid.Column="1" 
+                    <Label Grid.Column="1" 
                        Grid.Row="0" 
                        x:Name="lbl_date" 
                        FontFamily="Bauhaus 93" 
@@ -77,9 +80,9 @@
                        Background="Transparent"
                        BorderBrush="Transparent">
 
-                </Label>
+                    </Label>
 
-                <Label x:Name="lbl_Time"
+                    <Label x:Name="lbl_Time"
                        Grid.Row="0" 
                        Grid.Column="2" 
                        Content="{Binding CurrentDateAndTime}" 
@@ -90,15 +93,15 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center">
 
-                </Label>
-            </Grid>
+                    </Label>
+                </Grid>
 
 
 
 
-            <Image Source="/Images/test1.png" Margin="100,0,0,0"/>
-    
-            <Label Content="FlutterTech"
+                <Image Source="/Images/test1.png" Margin="100,0,0,0"/>
+
+                <Label Content="FlutterTech"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    Foreground="White"
@@ -106,8 +109,8 @@
                    Margin="0,0,50,0" 
                    FontFamily="Bauhaus 93"/>
 
-            <StackPanel Grid.Row="1">
-                <RadioButton Content="Home"
+                <StackPanel Grid.Row="1">
+                    <RadioButton Content="Home"
                              Height="60"
                              Foreground="White"
                              FontSize="15"
@@ -115,7 +118,7 @@
                              IsChecked="True"
                              Command="{Binding HomeCommand}"/>
 
-                <RadioButton Content="Note Application"
+                    <RadioButton Content="Note Application"
                              Height="60"
                              Foreground="White"
                              FontSize="15"
@@ -123,7 +126,7 @@
                              IsChecked="False"
                              Command="{Binding NoteCommand}"/>
 
-                <RadioButton Content="Calculator"
+                    <RadioButton Content="Calculator"
                              Height="60"
                              Foreground="White"
                              FontSize="15"
@@ -131,7 +134,7 @@
                              IsChecked="False"
                              Command="{Binding CalculatorCommand}"/>
 
-                <RadioButton Content="Drawing Board"
+                    <RadioButton Content="Drawing Board"
                              Height="60"
                              Foreground="White"
                              FontSize="15"
@@ -139,7 +142,7 @@
                              IsChecked="False"
                              Command="{Binding DrawingBoardCommand}"/>
 
-                <RadioButton Content="Employee Promotion"
+                    <RadioButton Content="Employee Promotion"
                              Height="60"
                              Foreground="White"
                              FontSize="15"
@@ -147,15 +150,15 @@
                              Command="{Binding EmployeePromotionCommand}"/>
 
 
-            </StackPanel>
+                </StackPanel>
 
-            <ContentControl Grid.Row="1" 
+                <ContentControl Grid.Row="1" 
                             Grid.Column="1"
                             Margin="3,3,3,3"
                             
                             Content="{Binding CurrentView}"/>
 
-        </Grid>
-    </Border>
+            </Grid>
+        </Border>
     </Border>
 </Window>

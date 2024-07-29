@@ -20,7 +20,8 @@
             </Grid.RowDefinitions>
 
             <TextBox Grid.Row="1" Grid.Column="0" x:Name="txt_ShowWhoPromoted"/>
-            <ComboBox Grid.Column="1" Grid.Row="1" x:Name="cmb_Promotion_Selection"/>
+            <ComboBox Grid.Column="1" Grid.Row="1" x:Name="cmb_Promotion_Selection" 
+                      SelectionChanged="cmb_Promotion_Selection_SelectionChanged"/>
             <ListBox Grid.Column="0" Grid.Row="2" Background="Gray" x:Name="lst_Employees"/>
             <Button Grid.Column="1" Grid.Row="2" x:Name="btn_New_Employee" Content="New Employee" Click="btn_New_Employee_Click"/>
             
