@@ -14,6 +14,7 @@ namespace MiniProjects.MVVM.View
         public EmployeePromotion()
         {
             InitializeComponent();
+            ComboBox();
         }
         string _Textbox1Constuctors;
         string _Textbox2Constuctors;
@@ -200,7 +201,7 @@ namespace MiniProjects.MVVM.View
 
                 Label label4 = new Label();
                 label4.Name = "lbl_Experience";
-                label4.Content = "Experinece";
+                label4.Content = "Experience";
                 label4.Visibility = Visibility.Visible;
                 label4.Margin = new Thickness(1);
                 label4.BorderBrush = new SolidColorBrush(Colors.White);
@@ -282,10 +283,11 @@ namespace MiniProjects.MVVM.View
                 empList1.Add(new Employee() { });
             }
         }
-        private void cmb_Promotion_Selection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboBox ()
         {
-            ComboBox comboBox = sender as ComboBox;
-            
+
+            cmb_Promotion_Selection.Items.Add("Experience");
+            cmb_Promotion_Selection.Items.Add("Salary");
 
         }
 
@@ -293,22 +295,19 @@ namespace MiniProjects.MVVM.View
         {
             EmployeePromotion employeePromotion = new EmployeePromotion();
 
-            //List<Employee> empList = new List<Employee>();
-
-            //empList.Add(new Employee() { ID = 1, Name = "Mark", Salary = 5000, Experience = 5 });
-            //empList.Add(new Employee() { ID = 1, Name = "Pat", Salary = 7000, Experience = 1 });
-            //empList.Add(new Employee() { ID = 1, Name = "Gab", Salary = 1000, Experience = 4 });
-            //empList.Add(new Employee() { ID = 1, Name = "Abel", Salary = 60000, Experience = 20 });
-            //empList.Add(new Employee() { });
-
-
-            //List<EmployeePromotion> empList1 = new List<EmployeePromotion>();
-            //empList1.Add(new EmployeePromotion() { });
+            List<Employee> empList = new List<Employee>();
 
             
+            empList.Add(new Employee() { });
 
 
-            Employee.Promotion(empList1, emp => emp.Experience >= 5);
+            List<EmployeePromotion> empList1 = new List<EmployeePromotion>();
+            empList1.Add(new EmployeePromotion() { });
+
+
+
+
+            //Employee.Promotion(empList, emp => emp.Experience >= 5);
 
 
 
@@ -317,16 +316,16 @@ namespace MiniProjects.MVVM.View
             List<ListBox> controlsToRemove = new List<ListBox>();
 
 
-            
 
-            foreach (var item in lst_Employees(employeePromotion).Items)
-            {
-                if (item is ListBox listbox)
-                {
-                    TextBox associatedCheckBox = listbox.Items.OfType<TextBox>().FirstOrDefault();
-                    empList1.Add(new Employee() { associatedCheckBox.Text });
-                }
-            }
+
+            //foreach (var item in lst_Employees(employeePromotion).Items)
+            //{
+            //    if (item is ListBox listbox)
+            //    {
+            //        TextBox associatedCheckBox = listbox.Items.OfType<TextBox>().FirstOrDefault();
+            //        empList1.Add(new Employee() { associatedCheckBox.Text });
+            //    }
+            //}
 
 
         }
@@ -354,7 +353,10 @@ namespace MiniProjects.MVVM.View
             }
         }
 
+        private void btn_CalculateResult_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 
     public delegate bool IsPromotable(Employee PromoteEmployee);
@@ -367,13 +369,40 @@ namespace MiniProjects.MVVM.View
         public int Salary { get; set; }
         public int Experience { get; set; }
 
-        public static void Promotion(List<Employee> emplist, IsPromotable IsEligiableToPromote)
+        public void Promotion(List<Employee> emplist, IsPromotable IsEligiableToPromote)
         {
             foreach (Employee employee in emplist)
             {
-                if (IsEligiableToPromote(employee))
+                if (IsEligiableToPromote(employee) && btn_CalculateResult != null)
                 {
                     MessageBox.Show(employee.Name + " promoted");
+
+                    ListBox dynamicPanel = new ListBox();
+                    dynamicPanel.Margin = new Thickness(1);
+                    dynamicPanel.Visibility = Visibility.Visible;
+                    dynamicPanel.Background = new SolidColorBrush(Colors.Yellow);
+                    dynamicPanel.Width = 770;
+
+                    Label label1 = new Label();
+                    label1.Name = "Result";
+                    label1.Content = employee.Name + " promoted";
+                    label1.Visibility = Visibility.Visible;
+                    label1.Margin = new Thickness(1);
+                    label1.BorderBrush = new SolidColorBrush(Colors.White);
+                    label1.Focusable = true;
+                    label1.UseLayoutRounding = true;
+                    label1.Background = new SolidColorBrush(Colors.Azure);
+                    label1.HorizontalAlignment = HorizontalAlignment.Left;
+                    label1.VerticalAlignment = VerticalAlignment.Top;
+                    label1.Padding = new Thickness(1);
+                    label1.MaxHeight = 50;
+                    label1.MinHeight = 20;
+                    label1.Width = 134;
+                    
+                    dynamicPanel.Items.Add(label1);
+
+                    lst_Employees.Items.Add(dynamicPanel);
+
                 }
             }
         }
