@@ -14,7 +14,7 @@
 
     
     
-    <Border CornerRadius="20" BorderThickness="3" BorderBrush="White" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+    <Border CornerRadius="20" BorderThickness="3" BorderBrush="White">
         
         <Border Background ="#272637" CornerRadius="20">
             <Grid>
@@ -99,7 +99,7 @@
 
 
 
-                <Image Source="/Images/test1.png" Margin="100,0,0,0"/>
+                <Image Source="/Images/test1.png" Margin="100,0,0,0" x:Name="Logo"/>
 
                 <Label Content="FlutterTech"
                    HorizontalAlignment="Center"
@@ -107,7 +107,8 @@
                    Foreground="White"
                    FontSize="20"
                    Margin="0,0,50,0" 
-                   FontFamily="Bauhaus 93"/>
+                   FontFamily="Bauhaus 93"
+                   MouseDoubleClick="Label_MouseDoubleClick"/>
 
                 <StackPanel Grid.Row="1">
                     <RadioButton Content="Home"

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MiniProjects
 {
@@ -26,6 +27,7 @@ namespace MiniProjects
         {
             InitializeComponent();
             UpdateLabel();
+            
 
             MouseLeftButtonDown += Window_MouseLeftButtonDown;
             MouseMove += Window_MouseMove;
@@ -43,6 +45,17 @@ namespace MiniProjects
                 Top = newTop;
             }
         }
+
+        //private void test2(object sender, MouseButtonEventArgs e)
+        //{
+        //    if (e.ClickCount == 5) 
+        //    {
+        //        this.Close();
+        //    }
+        //}
+
+
+
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -107,8 +120,12 @@ namespace MiniProjects
             }
         }
 
-        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+
+        private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+
+            ImageSource imageSource = new BitmapImage(new Uri("test1.png", UriKind.Relative));
+
             
         }
     }

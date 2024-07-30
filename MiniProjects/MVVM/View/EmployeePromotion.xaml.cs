@@ -375,7 +375,7 @@ namespace MiniProjects.MVVM.View
             {
                 if (IsEligiableToPromote(employee) && btn_CalculateResult != null)
                 {
-                    MessageBox.Show(employee.Name + " promoted");
+                    //MessageBox.Show(employee.Name + " promoted");
 
                     ListBox dynamicPanel = new ListBox();
                     dynamicPanel.Margin = new Thickness(1);
